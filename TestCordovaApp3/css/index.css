@@ -1,2 +1,10 @@
-﻿body {
+body {
+    background-color: #2f99e5;
+}
+.select-menu {
+    float: left;
+    font-size: 2em;
+}
+.select-text {
+    float: left;
 }

@@ -6,34 +6,46 @@
 
     <!-- TestCordovaApp3 references -->
     <link href="css/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
 </head>
 <body>
-    <div id="main-contain">
-        <span id="select-text">
-            From:
-        </span>
-    <select>
-        <option value="option 1">asdasda1</option>
-        <option value="option 2">asdasda2</option>
-        <option value="option 3">asdasda3</option>
-        <option value="option 4">asdasda4</option>
-        <option value="option 5">asdasda5</option>
-    </select>
-        <span id="select-text">
-            To:
-        </span>
-    <select>
-        <option value="option 1">asdasda1</option>
-        <option value="option 2">asdasda2</option>
-        <option value="option 3">asdasda3</option>
-        <option value="option 4">asdasda4</option>
-        <option value="option 5">asdasda5</option>
-    </select>
-    </div>
+
+    <div data-role="page" id="pageone">
+      <div data-role="header">
+        <h1>Welcome To My Homepage</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
+        <a href="#pagetwo">Go to Page Two</a>
+      </div>
+
+      <div data-role="footer">
+        <h1>Footer Text</h1>
+      </div>
+    </div> 
+
+    <div data-role="page" id="pagetwo">
+      <div data-role="header">
+        <h1>Welcome To My Homepage</h1>
+      </div>
+
+      <div data-role="main" class="ui-content">
+        <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
+        <a href="#pageone">Go to Page One</a>
+      </div>
+
+      <div data-role="footer">
+        <h1>Footer Text</h1>
+      </div>
+    </div> 
+
     <!-- Cordova reference, this is added to your app when it's built. -->
     <script src="cordova.js"></script>
     <script src="scripts/platformOverrides.js"></script>
-
+    
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
     <script src="scripts/index.js"></script>
 </body>
 </html>
