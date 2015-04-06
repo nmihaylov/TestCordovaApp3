@@ -173,7 +173,7 @@
         <div data-role="header">
             <h1>Резултати</h1>
         </div>
-        <div data-role="collapsible-set" id="add-all-the-data-here" onclick="myFunction(); return false;">
+        <div data-role="collapsible-set" id="add-all-the-data-here">
 
             <div data-role="collapsible" data-collapsed="false">
                 <h3>Section 1</h3>
@@ -213,35 +213,6 @@
         </div>
     </div>
     <!-- Cordova reference, this is added to your app when it's built. -->
-    <script>
-        function myFunction() {
-
-            if (window.XMLHttpRequest)
-            {// code for IE7+, Firefox, Chrome, Opera, Safari
-                xmlhttp=new XMLHttpRequest();
-            }
-            else
-            {// code for IE6, IE5
-                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-            }
-
-            xmlhttp.open("GET","data.xml",false);
-            xmlhttp.send();
-            xmlDoc=xmlhttp.responseXML;
-
-            x=xmlDoc.getElementsByTagName("record");
-            i=0;
-
-            function displayCD()
-            {
-                username=(x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue);
-                alert(type);
-            }
-
-            
-           
-        }
-    </script>
     <script src="scripts/jquery-1.11.2.min.js"></script>
     <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="cordova.js"></script>
