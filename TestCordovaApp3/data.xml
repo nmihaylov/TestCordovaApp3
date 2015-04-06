@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<allRecords xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<record>
+		<Type>Type 1</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 1</From>
+		<To>city 16</To>
+		<Date>2015-04-06</Date>
+		<Hour>16:00</Hour>
+		<Price>6</Price>
+	</record>
+	<record>
+		<Type>Type 2</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 2</From>
+		<To>city 17</To>
+		<Date>2015-04-07</Date>
+		<Hour>16:01</Hour>
+		<Price>7</Price>
+	</record>
+	<record>
+		<Type>Type 3</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 3</From>
+		<To>city 18</To>
+		<Date>2015-04-08</Date>
+		<Hour>16:02</Hour>
+		<Price>8</Price>
+	</record>
+	<record>
+		<Type>Type 4</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 4</From>
+		<To>city 19</To>
+		<Date>2015-04-09</Date>
+		<Hour>16:03</Hour>
+		<Price>9</Price>
+	</record>
+	<record>
+		<Type>Type 5</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 5</From>
+		<To>city 20</To>
+		<Date>2015-04-10</Date>
+		<Hour>16:04</Hour>
+		<Price>10</Price>
+	</record>
+	<record>
+		<Type>Type 6</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 6</From>
+		<To>city 21</To>
+		<Date>2015-04-11</Date>
+		<Hour>16:05</Hour>
+		<Price>11</Price>
+	</record>
+	<record>
+		<Type>Type 7</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 7</From>
+		<To>city 22</To>
+		<Date>2015-04-12</Date>
+		<Hour>16:06</Hour>
+		<Price>12</Price>
+	</record>
+	<record>
+		<Type>Type 8</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 8</From>
+		<To>city 23</To>
+		<Date>2015-04-13</Date>
+		<Hour>16:07</Hour>
+		<Price>13</Price>
+	</record>
+	<record>
+		<Type>Type 9</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 9</From>
+		<To>city 24</To>
+		<Date>2015-04-14</Date>
+		<Hour>16:08</Hour>
+		<Price>14</Price>
+	</record>
+	<record>
+		<Type>Type 10</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 10</From>
+		<To>city 25</To>
+		<Date>2015-04-15</Date>
+		<Hour>16:09</Hour>
+		<Price>15</Price>
+	</record>
+	<record>
+		<Type>Type 11</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 11</From>
+		<To>city 26</To>
+		<Date>2015-04-16</Date>
+		<Hour>16:10</Hour>
+		<Price>16</Price>
+	</record>
+	<record>
+		<Type>Type 12</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 12</From>
+		<To>city 27</To>
+		<Date>2015-04-17</Date>
+		<Hour>16:11</Hour>
+		<Price>17</Price>
+	</record>
+	<record>
+		<Type>Type 13</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 13</From>
+		<To>city 28</To>
+		<Date>2015-04-18</Date>
+		<Hour>16:12</Hour>
+		<Price>18</Price>
+	</record>
+	<record>
+		<Type>Type 14</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 14</From>
+		<To>city 29</To>
+		<Date>2015-04-19</Date>
+		<Hour>16:13</Hour>
+		<Price>19</Price>
+	</record>
+	<record>
+		<Type>Type 15</Type>
+		<Firm>Firm 1</Firm>
+		<From>city 15</From>
+		<To>city 30</To>
+		<Date>2015-04-20</Date>
+		<Hour>16:14</Hour>
+		<Price>20</Price>
+	</record>
+</allRecords>

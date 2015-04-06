@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TestCordovaApp3", "TestCordovaApp3\TestCordovaApp3.jsproj", "{47662781-9FDA-46AA-B035-620D7FE5C57F}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "TestAppWithData", "TestCordovaApp3\TestAppWithData.jsproj", "{47662781-9FDA-46AA-B035-620D7FE5C57F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

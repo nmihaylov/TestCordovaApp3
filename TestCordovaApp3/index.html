@@ -3,49 +3,251 @@
 <head>
     <meta charset="utf-8" />
     <title>TestCordovaApp3</title>
-
     <!-- TestCordovaApp3 references -->
     <link href="css/index.css" rel="stylesheet" />
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
 </head>
 <body>
+    <div data-role="page" id="page-one">
+        <div data-role="header">
+            <h1>Здравейте!<br />Търсене:</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>some info text here</p>
+            <div data-role="fieldcontain">
+                <label for="select-choice-destination-1" class="select">От:</label>
+                <select name="select-choice-destination-1" id="select-choice-destination-1">
+                    <option value="">Начална дестинация</option>
+                    <option value="">град 1</option>
+                    <option value="">град 2</option>
+                    <option value="">град 3</option>
+                    <option value="">град 4</option>
+                </select>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="select-choice-destination-2" class="select">До:</label>
+                <select name="select-choice-destination-2" id="select-choice-destination-2">
+                    <option value="">Крайна дестинация</option>
+                    <option value="">град 1</option>
+                    <option value="">град 2</option>
+                    <option value="">град 3</option>
+                    <option value="">град 4</option>
+                </select>
+            </div>
+            <div class="ui-data">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#dialog-page" data-transition="pop">
+                            <button data-icon="info">Info</button>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#page-two" data-transition="turn">
+                            <button data-icon="search">Търсене</button>
+                        </a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+    </div>
+    <div data-role="page" id="page-two">
+        <div data-role="header">
+            <h1>Изберете подробности</h1>
+        </div>
+        <div data-role="content" class="ui-content">
+            <div data-role="fieldcontain">
+                <label for="select-choice-transport-2" class="select">Вид транспорт:</label>
+                <select name="select-choice-transport-2" id="select-choice-transport-2">
+                    <option value="">Изберете вид транспорт</option>
+                    <option value="">вид транспорт 1</option>
+                    <option value="">вид транспорт 2</option>
+                    <option value="">вид транспорт 3</option>
+                    <option value="">вид транспорт 4</option>
+                </select>
+            </div>
+            <div data-role="fieldcontain">
+                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false">
+                    <legend>Дата на пътуване:</legend>
 
-    <div data-role="page" id="pageone">
-      <div data-role="header">
-        <h1>Welcome To My Homepage</h1>
-      </div>
+                    <!--<input type="text" id="date-picker" data-role="date"/>-->
+                    <select name="select-choice-year" id="select-choice-year">
+                        <option>Година</option>
+                        <option value="">2015</option>
+                        <option value="">2016</option>
+                        <option value="">2017</option>
+                        <option value="">2018</option>
+                        <option value="">2019</option>
+                        <option value="">2020</option>
+                        <option value="">2021</option>
+                        <option value="">2022</option>
+                        <option value="">2023</option>
+                        <option value="">2024</option>
+                        <option value="">2025</option>
+                    </select>
 
-      <div data-role="main" class="ui-content">
-        <p>Welcome! If you click on the link below, it will take you to Page Two.</p>
-        <a href="#pagetwo">Go to Page Two</a>
-      </div>
+                    <select name="select-choice-month" id="select-choice-month">
+                        <option>Месец</option>
+                        <option value="">January</option>
+                        <option value="">February</option>
+                        <option value="">March</option>
+                        <option value="">April</option>
+                        <option value="">May</option>
+                        <option value="">June</option>
+                        <option value="">July</option>
+                        <option value="">August</option>
+                        <option value="">September</option>
+                        <option value="">October</option>
+                        <option value="">November</option>
+                        <option value="">December</option>
+                    </select>
 
-      <div data-role="footer">
+                    <select name="select-choice-day" id="select-choice-day">
+                        <option>Ден</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                        <option value="">7</option>
+                        <option value="">8</option>
+                        <option value="">9</option>
+                        <option value="">10</option>
+                        <option value="">11</option>
+                        <option value="">12</option>
+                        <option value="">13</option>
+                        <option value="">14</option>
+                        <option value="">15</option>
+                        <option value="">16</option>
+                        <option value="">17</option>
+                        <option value="">18</option>
+                        <option value="">19</option>
+                        <option value="">20</option>
+                        <option value="">21</option>
+                        <option value="">22</option>
+                        <option value="">23</option>
+                        <option value="">24</option>
+                        <option value="">25</option>
+                        <option value="">26</option>
+                        <option value="">27</option>
+                        <option value="">28</option>
+                        <option value="">29</option>
+                        <option value="">30</option>
+                        <option value="">31</option>
+                    </select>
+                </fieldset>
+            </div>
+            <div data-role="fieldcontain">
+                <label for="select-choice-hour" class="select">Час на тръгване:</label>
+                <select name="select-choice-hour" id="select-choice-hour">
+                    <option value="">Изберете час</option>
+                    <option value="">час 1</option>
+                    <option value="">час 2</option>
+                    <option value="">час 3</option>
+                    <option value="">час 4</option>
+                </select>
+            </div>
+            <div class="ui-data">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <a href="#page-one" data-transition="turn">
+                            <button data-icon="back">Връщане</button>
+                        </a>
+                    </div>
+                    <div class="ui-block-b">
+                        <a href="#page-three" data-transition="turn">
+                            <button data-icon="search">Търсене</button>
+                        </a>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <div data-role="footer">
+            <h1>Footer Text</h1>
+        </div>
+    </div>
+    <div data-role="page" id="page-three">
+        <div data-role="header">
+            <h1>Резултати</h1>
+        </div>
+        <div data-role="collapsible-set" id="add-all-the-data-here" onclick="myFunction(); return false;">
+
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Section 1</h3>
+                <p>I'm the collapsible set content for section 1.</p>
+            </div>
+
+
+        </div>
+        <div class="ui-data">
+            <fieldset class="ui-grid-a">
+                <div class="ui-block-a">
+                    <a href="#page-two" data-transition="turn">
+                        <input type="submit" data-icon="back" value="Връщане:"/>
+                    </a>
+                </div>
+                <div class="ui-block-b">
+                    <a href="#dialog-page" data-transition="pop">
+                        <input type ="submit" data-icon="info" value="info"/>
+                    </a>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+    <div data-role="footer">
         <h1>Footer Text</h1>
-      </div>
-    </div> 
+    </div>
 
-    <div data-role="page" id="pagetwo">
-      <div data-role="header">
-        <h1>Welcome To My Homepage</h1>
-      </div>
-
-      <div data-role="main" class="ui-content">
-        <p>This is Page Two. If you click on the link below, it will take you to Page One.</p>
-        <a href="#pageone">Go to Page One</a>
-      </div>
-
-      <div data-role="footer">
-        <h1>Footer Text</h1>
-      </div>
-    </div> 
-
+    <div data-role="page" data-dialog="true" id="dialog-page">
+        <div data-role="header">
+            <h1>I'm A Dialog Box!</h1>
+        </div>
+        <div data-role="main" class="ui-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div data-role="footer">
+            <h1>Footer Text In Dialog</h1>
+        </div>
+    </div>
     <!-- Cordova reference, this is added to your app when it's built. -->
+    <script>
+        function myFunction() {
+
+            if (window.XMLHttpRequest)
+            {// code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            }
+            else
+            {// code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+
+            xmlhttp.open("GET","data.xml",false);
+            xmlhttp.send();
+            xmlDoc=xmlhttp.responseXML;
+
+            x=xmlDoc.getElementsByTagName("record");
+            i=0;
+
+            function displayCD()
+            {
+                username=(x[i].getElementsByTagName("type")[0].childNodes[0].nodeValue);
+                alert(type);
+            }
+
+            
+           
+        }
+    </script>
+    <script src="scripts/jquery-1.11.2.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="cordova.js"></script>
     <script src="scripts/platformOverrides.js"></script>
-    
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
     <script src="scripts/index.js"></script>
+
 </body>
 </html>
