@@ -18,7 +18,7 @@
         $("#add-all-the-data-here").append("<div data-role='collapsible' data-collapsed='true'><h3>some type</h3><p>some date</p></div>");
         $("#add-all-the-data-here").append("<div data-role='collapsible' data-collapsed='true'><h3>some type</h3><p>some date</p></div>");
         $("#add-all-the-data-here").append("<div data-role='collapsible' data-collapsed='true'><h3>some type</h3><p>some date</p></div>");
-        window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
+        //window.requestFileSystem(LocalFileSystem.PERSISTENT, 0, gotFS, fail);
         alert('dasdasdasdasdas')
     };
 
