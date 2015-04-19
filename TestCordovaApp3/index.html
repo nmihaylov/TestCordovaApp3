@@ -10,28 +10,24 @@
 <body>
     <div data-role="page" id="page-one">
         <div data-role="header">
-            <h1>Здравейте!<br />Търсене:</h1>
+            <h1>Търсене:</h1>
         </div>
         <div data-role="main" class="ui-content">
+        <input type="button" onclick="getData()" value="get data"/>
+        <input type="button" onclick="addAllDestinations()" value="fill all data" />
+        <!--<input type="button" id="add-from-destinations" value="fill from data" />
+        <input type="button" id="add-to-destinations" value="fill to data" />-->
             <p>some info text here</p>
             <div data-role="fieldcontain">
                 <label for="select-choice-destination-1" class="select">От:</label>
-                <select name="select-choice-destination-1" id="select-choice-destination-1">
-                    <option value="">Начална дестинация</option>
-                    <option value="">град 1</option>
-                    <option value="">град 2</option>
-                    <option value="">град 3</option>
-                    <option value="">град 4</option>
+                <select name="select-choice-destination-1" id="select-destination-from" onchange="addToDestinations()">
+                    <option value="Null">Начална дестинация</option>
                 </select>
             </div>
             <div data-role="fieldcontain">
                 <label for="select-choice-destination-2" class="select">До:</label>
-                <select name="select-choice-destination-2" id="select-choice-destination-2">
-                    <option value="">Крайна дестинация</option>
-                    <option value="">град 1</option>
-                    <option value="">град 2</option>
-                    <option value="">град 3</option>
-                    <option value="">град 4</option>
+                <select name="select-choice-destination-2" id="select-destination-to">
+                    <option value="Null">Крайна дестинация</option>
                 </select>
             </div>
             <div class="ui-data">
@@ -213,13 +209,16 @@
         </div>
     </div>
     <!-- Cordova reference, this is added to your app when it's built. -->
-    <script src="scripts/jquery-1.11.2.min.js"></script>
-    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="cordova.js"></script>
+    <script src="scripts/jquery-1.9.1.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
     <script src="scripts/platformOverrides.js"></script>
 
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/q.js/0.9.2/q.js"></script>
+
+    <script src="scripts/ajaxRequester.js"></script>
+    <script src="scripts/main.js"></script>
     <script src="scripts/index.js"></script>
-    <script src="scripts/cordova.js"></script>
 
 </body>
 </html>
