@@ -42,6 +42,19 @@ var app = app || {};
 })();
 
 
+function sortSelectOptions(selectElement) {
+    var options = $(selectElement + " option");
+
+    options.sort(function (a, b) {
+        if (a.text.toUpperCase() > b.text.toUpperCase()) return 1;
+        else if (a.text.toUpperCase() < b.text.toUpperCase()) return -1;
+        else return 0;
+    });
+
+    $(selectElement).empty().append(options);
+}
+
+
 function addToDestinations() {
 
     var selectFrom = $('#select-destination-from option:selected').text();
@@ -65,6 +78,9 @@ function addToDestinations() {
         selectTo.append($("<option>" + selectToArr[i] + "</option>"))
 
     }
+
+    sortSelectOptions('#select-destination-from');
+    sortSelectOptions('#select-destination-to');
 }
 
 function addAllDestinations() {
@@ -95,14 +111,15 @@ function addAllDestinations() {
         selectTo.append($("<option>" + selectToArr[i] + "</option>"))
 
     }
+
+    sortSelectOptions('#select-destination-from');
+    sortSelectOptions('#select-destination-to');
     //selectFrom.append("<option>test option 3</option>");
 
     //$('select-destination-from').append(selectFrom);
     //$('select-destination-to').append(selectTo);
     //$('body').append($("<button onclick='showResults()'>Show Results</button>"))
 }
-
-
 
 function displayAllData() {
     for (var i = 0; i < app.globalData.length; i++) {

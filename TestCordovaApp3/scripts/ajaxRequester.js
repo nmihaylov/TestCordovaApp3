@@ -15,7 +15,8 @@ app.ajaxRequester = (function () {
             contentType: 'application/json',
             data: JSON.stringify(data) || undefined,
             success: success,
-            error: error
+            error: error,
+            limit: 10000
         });
     }
 
