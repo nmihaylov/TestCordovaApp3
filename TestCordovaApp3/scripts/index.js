@@ -42,17 +42,6 @@ var app = app || {};
 })();
 
 
-function sortSelectOptions(selectElement) {
-    var options = $(selectElement + " option");
-
-    options.sort(function (a, b) {
-        if (a.text.toUpperCase() > b.text.toUpperCase()) return 1;
-        else if (a.text.toUpperCase() < b.text.toUpperCase()) return -1;
-        else return 0;
-    });
-
-    $(selectElement).empty().append(options);
-}
 
 
 function addToDestinations() {
@@ -64,7 +53,7 @@ function addToDestinations() {
     
     for (var i = 0; i < app.globalData.length; i++) {
         var dircetion = app.globalData[i]
-        if (($.inArray(dircetion.From, selectFromArr)) == -1) {
+        if (($.inArray(dircetion.To, selectToArr)) == -1) {
             if (dircetion.From == selectFrom) {
                 console.log('if 2')
                 selectToArr.push(dircetion.To);
@@ -72,16 +61,17 @@ function addToDestinations() {
         }
     }
 
-    selectTo.html('');
+    selectTo.html('<option value="" disabled selected>Крайна дестинация</option>');
 
     for (var i = 0; i < selectToArr.length; i++) {
         selectTo.append($("<option>" + selectToArr[i] + "</option>"))
 
     }
 
-    sortSelectOptions('#select-destination-from');
-    sortSelectOptions('#select-destination-to');
+    //sortSelectOptions('#select-destination-from');
+    //sortSelectOptions('#select-destination-to');
 }
+
 
 function addAllDestinations() {
     //alert('addAllDestinations')
@@ -112,14 +102,29 @@ function addAllDestinations() {
 
     }
 
-    sortSelectOptions('#select-destination-from');
-    sortSelectOptions('#select-destination-to');
+    //sortSelectOptions('#select-destination-from');
+    //sortSelectOptions('#select-destination-to');
+
     //selectFrom.append("<option>test option 3</option>");
 
     //$('select-destination-from').append(selectFrom);
     //$('select-destination-to').append(selectTo);
     //$('body').append($("<button onclick='showResults()'>Show Results</button>"))
 }
+
+
+function sortSelectOptions(selectElement) {
+    var options = $(selectElement + " option");
+
+    options.sort(function (a, b) {
+        if (a.text.toUpperCase() > b.text.toUpperCase()) return 1;
+        else if (a.text.toUpperCase() < b.text.toUpperCase()) return -1;
+        else return 0;
+    });
+
+    $(selectElement).empty().append(options);
+}
+
 
 function displayAllData() {
     for (var i = 0; i < app.globalData.length; i++) {
