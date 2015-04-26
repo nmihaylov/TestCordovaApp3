@@ -6,15 +6,16 @@
     <!-- TestCordovaApp3 references -->
     <link href="css/index.css" rel="stylesheet" />
     <link href="css/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="css/jqm-datebox.min.css" rel="stylesheet" />
 </head>
 <body>
     <div data-role="page" id="page-one">
-        <div data-role="header">
+        <div data-role="header" data-position="fixed">
             <h1>Търсене:</h1>
         </div>
         <div data-role="main" class="ui-content">
         <input type="button" onclick="getData()" value="get data"/>
-        <input type="button" onclick="addAllDestinations()" value="fill all data" />
+        <input type="button" onclick="addAllDestinations()" value="reset destinations" />
         <!--<input type="button" id="add-from-destinations" value="fill from data" />
         <input type="button" id="add-to-destinations" value="fill to data" />-->
             <p>some info text here</p>
@@ -26,7 +27,7 @@
             </div>
             <div data-role="fieldcontain">
                 <label for="select-choice-destination-2" class="select">До:</label>
-                <select name="select-choice-destination-2" id="select-destination-to">
+                <select name="select-choice-destination-2" id="select-destination-to" ><!--onchange="addFromDestinations()"-->
                     <option value="" disabled selected>Крайна дестинация</option>
                 </select>
             </div>
@@ -45,7 +46,7 @@
                 </fieldset>
             </div>
         </div>
-        <div data-role="footer">
+        <div data-role="footer" data-position="fixed">
             <h1>Footer Text</h1>
         </div>
     </div>
@@ -64,88 +65,18 @@
                     <option value="">вид транспорт 4</option>
                 </select>
             </div>
+
             <div data-role="fieldcontain">
-                <fieldset data-role="controlgroup" data-type="horizontal" data-mini="false">
-                    <legend>Дата на пътуване:</legend>
-
-                    <!--<input type="text" id="date-picker" data-role="date"/>-->
-                    <select name="select-choice-year" id="select-choice-year">
-                        <option>Година</option>
-                        <option value="">2015</option>
-                        <option value="">2016</option>
-                        <option value="">2017</option>
-                        <option value="">2018</option>
-                        <option value="">2019</option>
-                        <option value="">2020</option>
-                        <option value="">2021</option>
-                        <option value="">2022</option>
-                        <option value="">2023</option>
-                        <option value="">2024</option>
-                        <option value="">2025</option>
-                    </select>
-
-                    <select name="select-choice-month" id="select-choice-month">
-                        <option>Месец</option>
-                        <option value="">January</option>
-                        <option value="">February</option>
-                        <option value="">March</option>
-                        <option value="">April</option>
-                        <option value="">May</option>
-                        <option value="">June</option>
-                        <option value="">July</option>
-                        <option value="">August</option>
-                        <option value="">September</option>
-                        <option value="">October</option>
-                        <option value="">November</option>
-                        <option value="">December</option>
-                    </select>
-
-                    <select name="select-choice-day" id="select-choice-day">
-                        <option>Ден</option>
-                        <option value="">1</option>
-                        <option value="">2</option>
-                        <option value="">3</option>
-                        <option value="">4</option>
-                        <option value="">5</option>
-                        <option value="">6</option>
-                        <option value="">7</option>
-                        <option value="">8</option>
-                        <option value="">9</option>
-                        <option value="">10</option>
-                        <option value="">11</option>
-                        <option value="">12</option>
-                        <option value="">13</option>
-                        <option value="">14</option>
-                        <option value="">15</option>
-                        <option value="">16</option>
-                        <option value="">17</option>
-                        <option value="">18</option>
-                        <option value="">19</option>
-                        <option value="">20</option>
-                        <option value="">21</option>
-                        <option value="">22</option>
-                        <option value="">23</option>
-                        <option value="">24</option>
-                        <option value="">25</option>
-                        <option value="">26</option>
-                        <option value="">27</option>
-                        <option value="">28</option>
-                        <option value="">29</option>
-                        <option value="">30</option>
-                        <option value="">31</option>
-                    </select>
-                </fieldset>
+                <label for="select-choice-day" class="select">Дата на тръгване:</label>
+                <input type="date" data-role="datebox" id="select-date" data-options='{"mode": "flipbox", "dateFormat":"/%Y%m/%d", "overrideDateFieldOrder":["d", "m", "y"]}' />
             </div>
+
             <div data-role="fieldcontain">
-                <label for="select-choice-hour" class="select">Час на тръгване:</label>
-                <select name="select-choice-hour" id="select-choice-hour">
-                    <option value="">Изберете час</option>
-                    <option value="">час 1</option>
-                    <option value="">час 2</option>
-                    <option value="">час 3</option>
-                    <option value="">час 4</option>
-                </select>
+                <label for="select-choice-time" class="select">Час на тръгване:</label>
+                <input type="date" data-role="datebox" id="select-time" data-options='{"mode": "timeflipbox"}' />
             </div>
+           
+           
             <div class="ui-data">
                 <fieldset class="ui-grid-a">
                     <div class="ui-block-a">
@@ -155,7 +86,7 @@
                     </div>
                     <div class="ui-block-b">
                         <a href="#page-three" data-transition="turn">
-                            <input type="submit" data-icon="search" value="Търсене"/>
+                            <input type="submit" data-icon="search" onclick="showFilterFromTo()" value="Търсене"/>
                         </a>
                     </div>
                 </fieldset>
@@ -169,12 +100,9 @@
         <div data-role="header">
             <h1>Резултати</h1>
         </div>
-        <div data-role="collapsible-set" id="add-all-the-data-here">
+        <div data-role="collapsible-set" id="filtered-data">
 
-            <div data-role="collapsible" data-collapsed="false">
-                <h3>Section 1</h3>
-                <p>I'm the collapsible set content for section 1.</p>
-            </div>
+
 
 
         </div>
@@ -218,6 +146,8 @@
 
     <script src="scripts/ajaxRequester.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/jqm-datebox.all.amd.min.js"></script>
+    <!--<script src="scripts/jquery-mobile-datebox-bg.js"></script> -->
     <script src="scripts/index.js"></script>
 
 </body>

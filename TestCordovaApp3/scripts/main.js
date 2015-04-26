@@ -5,6 +5,7 @@ app.globalData = [];
 function getData() {
     //alert('get data')
     console.log('get data');
+    
     app.ajaxRequester.get(
 	baseUrl,
 	function (data) {
@@ -12,8 +13,9 @@ function getData() {
 	        var dircetion = data.results[dircetion];
 	        app.globalData.push(dircetion);
 	    }
-        
+	    
 	    console.log('get data success');
+	    addAllDestinations();
 	    //alert('get data success');
 	},
 	function () {
