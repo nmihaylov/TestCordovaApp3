@@ -8,11 +8,11 @@ var app = app || {};
 (function () {
     "use strict";
 
-    //document.addEventListener('deviceready', onDeviceReady.bind(this), false);
+    document.addEventListener('deviceready', onDeviceReady.bind(this), false);
 
     // ############ IMPORTANT REMOVE THIS BEFORE ADD TO PHONEGAP
     // ################################################################################
-    setTimeout(onDeviceReady(), 5000);
+    //setTimeout(onDeviceReady(), 5000);
     // ################################################################################
   
     function onDeviceReady() {
